@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="企业知识与流程协同平台" />
+    <title>企业知识与流程协同平台</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      window.addEventListener('error', (event) => {
+        document.getElementById('app').innerHTML = '<pre style="padding:24px;color:#b42318">' + event.message + '</pre>'
+      })
+      window.addEventListener('unhandledrejection', (event) => {
+        document.getElementById('app').innerHTML = '<pre style="padding:24px;color:#b42318">' + event.reason + '</pre>'
+      })
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
